@@ -1,0 +1,47 @@
+<!-- reporte.component.html -->
+<div class="container">
+  REPORTE DE PAGO IMPUESTO RENTA
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Tipo de Gasto</th>
+        <th scope="col">RUC</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reporte of reportes; let i = index">
+        <th scope="row">{{ reporte._id }} </th>
+        <td *ngIf="!reporteEditando || (reporteEditando && reporteEditando._id !== reporte._id)">
+          {{ reporte.tipo }}
+        </td>
+        <td *ngIf="reporteEditando && reporteEditando._id === reporte._id">
+          <input [(ngModel)]="reporte.tipo" placeholder="Tipo de Gasto">
+        </td>
+        <td *ngIf="!reporteEditando || (reporteEditando && reporteEditando._id !== reporte._id)">
+          {{ reporte.ruc }}
+        </td>
+        <td *ngIf="reporteEditando && reporteEditando._id === reporte._id">
+          <input [(ngModel)]="reporte.ruc" placeholder="RUC">
+        </td>
+        <td *ngIf="!reporteEditando || (reporteEditando && reporteEditando._id !== reporte._id)">
+          {{ reporte.valor }}
+        </td>
+        <td *ngIf="reporteEditando && reporteEditando._id === reporte._id">
+          <input [(ngModel)]="reporte.valor" placeholder="Valor">
+        </td>
+        <td>
+          <button class="btn btn-danger btn-borrar" (click)="eliminarReporte(reporte)">Borrar</button>
+          <button class="btn btn-warning btn-editar" (click)="editarReporte(reporte)">
+            {{ reporteEditando && reporteEditando._id === reporte._id ? 'Guardar' : 'Editar' }}
+          </button>
+          <button class="btn btn-success btn-guardar" *ngIf="reporteEditando && reporteEditando._id === reporte._id" (click)="guardarEdicion()">
+            Guardar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

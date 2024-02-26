@@ -1,0 +1,13 @@
+/* menu.component.css */
+.nav-tabs .nav-item {
+    transition: background-color 0.3s;
+  }
+  
+  .nav-tabs .nav-item.activo {
+    background-color: #ccc;
+  }
+  
+  .nav-tabs .nav-item.activo a {
+    color: green;
+  }
+  

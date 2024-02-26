@@ -1,0 +1,30 @@
+<div class="container">
+  <form [formGroup]="gastoForm" (ngSubmit)="onSubmit()">
+    <h1 class="text-center text-primary mb-4">Facturas Gastos</h1>
+
+    <div class="mb-3">
+      <label for="ruc" class="form-label">RUC</label>
+      <input type="text" class="form-control" id="ruc" formControlName="ruc" />
+    </div>
+
+    <div class="mb-3">
+      <label for="valor" class="form-label">Valor de factura</label>
+      <input type="text" class="form-control" id="valor" formControlName="valor" />
+    </div>
+
+    <div class="mb-3">
+      <label for="tipo" class="form-label">Tipo de gasto</label>
+      <select class="form-select" id="tipo" formControlName="tipo">
+        <option value="" disabled selected>Escoja el tipo de gasto</option>
+        <option value="Salud">Salud</option>
+        <option value="Vivienda">Vivienda</option>
+        <option value="Educacion">Educación</option>
+        <option value="Ninguno">Ninguno</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+</div>
+
+  

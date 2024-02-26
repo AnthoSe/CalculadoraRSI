@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "tipo": "Vivienda",
+      "ruc": "123456789",
+      "valor": 1000,
+      "descripcion": "Gasto relacionado con vivienda",
+      "informacion_adicional": "Esta es información adicional sobre el gasto de vivienda",
+      "imagen_url": "url_de_la_imagen_1.jpg"
+    },
+    {
+      "id": 2,
+      "tipo": "Salud",
+      "ruc": "987654321",
+      "valor": 800,
+      "descripcion": "Gasto relacionado con salud",
+      "informacion_adicional": "Esta es información adicional sobre el gasto de salud",
+      "imagen_url": "url_de_la_imagen_2.jpg"
+    },
+    {
+      "id": 3,
+      "tipo": "Educacion",
+      "ruc": "567890123",
+      "valor": 1200,
+      "descripcion": "Gasto relacionado con educación",
+      "informacion_adicional": "Esta es información adicional sobre el gasto de educación",
+      "imagen_url": "url_de_la_imagen_3.jpg"
+    }
+  ]
+  
